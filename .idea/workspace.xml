@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d7e735f-dc19-4dd6-bd41-818449ec0323" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/aoniuchu.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/CartController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/CommonController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/IndexController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/MemberController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/OrderController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/SiteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Address.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Cart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Gopager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Sku.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/ContactForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/ContactForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/LoginForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/LoginForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -174,7 +173,7 @@
             <path>
               <item name="yiibasic" type="b2602c69:ProjectViewProjectNode" />
               <item name="yiibasic" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -192,6 +191,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\phpwamp\wwwroot\yiibasic\models" />
       <recent name="D:\phpwamp\wwwroot\yiibasic\controllers" />
     </key>
   </component>
@@ -217,12 +217,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1535707926559</updated>
-      <workItem from="1535707928040" duration="1124000" />
+      <workItem from="1535707928040" duration="1247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1124000" />
+    <option name="totallyTimeSpent" value="1247000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
