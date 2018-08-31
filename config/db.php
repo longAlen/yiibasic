@@ -2,7 +2,7 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=imooc_shop',
+    'dsn' => 'mysql:host=127.0.0.1;dbname=imooc_shop',
     'username' => 'root',
     'password' => '113abce1651A',
     'charset' => 'utf8',
