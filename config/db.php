@@ -2,9 +2,9 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=yii2basic',
+    'dsn' => 'mysql:host=localhost;dbname=imooc_shop',
     'username' => 'root',
-    'password' => '',
+    'password' => '113abce1651A',
     'charset' => 'utf8',
 
     // Schema cache options (for production environment)
