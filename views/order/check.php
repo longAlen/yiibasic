@@ -11,12 +11,16 @@
                         <div class="row field-row" style="margin-top:10px">
                             <div class="col-xs-12">
                                 <input  class="le-radio big" type="radio" name="address" />
-                                <a class="simple-link bold" href="#"><?=$list->firstname.$list->lastname?>&nbsp;&nbsp;&nbsp;&nbsp;<?=$list->address.$list->address_detail?>&nbsp;&nbsp;&nbsp;&nbsp; <?=$list->telephone?></a><span style="float:right;">
+                                <a class="simple-link bold" href="#"><?=$list->firstname.$list->lastname?>&nbsp;&nbsp;&nbsp;&nbsp;<?=$list->address.$list->address_detail?>&nbsp;&nbsp;&nbsp;&nbsp; <?=$list->telephone?></a>
+                                <span style="float:right;">
                                     <?php if ($list->is_default):?>
                                         <a href="#" class="">默认地址</a>
                                     <?php else:?>
                                         <a href="#" class="set-default-address" style="color: #0e0e0e;">设为默认</a>
                                     <?php endif;?>
+                                </span>
+                                <span>
+                                    <?=\yii\helpers\Html::button('编辑');?>
                                 </span>
                             </div>
                         </div><!-- /.field-row -->

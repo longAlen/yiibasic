@@ -24,13 +24,12 @@ class  OrderController extends  CommonController{
     //订单结算页--收银台
     public function  actionCheck(){
         $this->layout ='layout1';
+
+
+        //收货地址信息
         $model = new Address();
-        //用户信息
-
         $user = User::find()->where(['username'=>Yii::$app->session['user']['username'],'is_enable'=>1])->one();
-
         $address = Address::find()->where(['userid'=>$user->userid])->select(['firstname','lastname','address','address_detail','telephone','is_default'])->limit(7)->orderBy('createtime desc')->all();
-
         return $this->render('check',['model'=>$model,'address'=>$address]);
     }
 
