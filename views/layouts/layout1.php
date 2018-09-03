@@ -318,7 +318,7 @@
                     <!-- ============================================================= CONTACT INFO ============================================================= -->
                     <div class="contact-info">
                         <div class="footer-logo">
-                            <img alt="logo" src="assets/images/logo.PNG" width="233" height="54"/>
+                            <img alt="logo" src="assets/images/logo.png" width="233" height="54"/>
                         </div><!-- /.footer-logo -->
 
                         <p class="regular-bold"> 请通过电话，电子邮件随时联系我们</p>
