@@ -98,7 +98,7 @@
                         </thead>
                         <tbody>
                         <!-- row -->
-                        <?foreach($models as $pro){?>
+                        <?php foreach($models as $pro){?>
                         <tr class="first">
                             <td>
                                 <input type="checkbox" />
