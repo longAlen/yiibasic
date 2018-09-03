@@ -164,18 +164,18 @@
                                 </li>
                                 <?php endforeach;?>
 
-<!--                                <li class="checkout">-->
-<!--                                    <div class="pagination pull-right">-->
-<!--                                        --><?//=\yii\widgets\LinkPager::widget([
-//                                            'pagination'=>$this->params['pages'],
-//                                            // 'firstPageLabel'=>'首页',
-//                                            //'lastPageLabel'=>'尾页',
-//                                            'prevPageLabel'=>'上一页',
-//                                            'nextPageLabel'=>'下一页',
-//                                            'hideOnSinglePage'=>true,
-//                                        ])?>
-<!--                                    </div>-->
-<!--                                </li>-->
+                               <!-- <li class="checkout">
+                                    <div class="pagination pull-right">
+                                        <?/*=\yii\widgets\LinkPager::widget([
+                                            'pagination'=>$this->params['pages'],
+                                            // 'firstPageLabel'=>'首页',
+                                            //'lastPageLabel'=>'尾页',
+                                            'prevPageLabel'=>'上一页',
+                                            'nextPageLabel'=>'下一页',
+                                            'hideOnSinglePage'=>true,
+                                        ])*/?>
+                                    </div>
+                                </li>-->
 
 
                                 <li class="checkout">
