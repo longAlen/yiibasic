@@ -45,9 +45,12 @@
             <div class="col-xs-12 col-sm-6 no-margin">
                 <ul>
                     <li><a href="<?=Yii::$app->homeUrl?>">首页</a></li>
-                    <li><a href="<?=\yii\helpers\Url::to(['product/index'])?>">所有分类</a></li>
+                    <?php if (Yii::$app->session['user']['isLogin']):?>
+<!--                    <li><a href="--><?//=\yii\helpers\Url::to(['product/index'])?><!--">所有分类</a></li>-->
                     <li><a href="cart.html">我的购物车</a></li>
-                    <li><a href="orders.html">我的订单</a></li>
+                        <li><?=\yii\helpers\Html::a('我的购物车',['cart/index'])?></li>
+                    <li><a href="<?=\yii\helpers\Url::to(['order/index'])?>">我的订单</a></li>
+                    <?php endif;?>
                 </ul>
             </div><!-- /.col -->
 
