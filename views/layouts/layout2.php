@@ -132,7 +132,7 @@
                                 <div class="total-price-basket">
                                     <span class="lbl">您的购物车:</span>
                                     <span class="total-price">
-                        <span class="sign">￥</span><span class="value"><?=number_format($this->params['totalprice']),2?></span>
+                        <span class="sign">￥</span><span class="value"><?=number_format($this->params['totalprice'],2)?></span>
                     </span>
                                 </div>
                             </a>
@@ -157,7 +157,7 @@
                                     </div>
                                 </li>
                                 <?php endforeach;?>
-                                
+
                                 <li class="checkout">
                                     <div class="basket-item">
                                         <div class="row">
