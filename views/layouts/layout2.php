@@ -125,80 +125,50 @@
 
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                 <div class="basket-item-count">
-                                    <span class="count">3</span>
+                                    <span class="count"><?=$this->params['count']?></span>
                                     <img src="assets/images/icon-cart.png" alt="" />
                                 </div>
 
                                 <div class="total-price-basket">
                                     <span class="lbl">您的购物车:</span>
                                     <span class="total-price">
-                        <span class="sign">￥</span><span class="value">3219</span>
+                        <span class="sign">￥</span><span class="value"><?=number_format($this->params['totalprice']),2?></span>
                     </span>
                                 </div>
                             </a>
 
                             <ul class="dropdown-menu">
+
+                                <?php foreach ($this->params['cart'] as $k=> $cart):?>
                                 <li>
                                     <div class="basket-item">
                                         <div class="row">
                                             <div class="col-xs-4 col-sm-4 no-margin text-center">
                                                 <div class="thumb">
-                                                    <img alt="" src="assets/images/products/product-small-01.jpg" />
+                                                    <img alt="" src="http://<?=$cart['cover']?>" />
                                                 </div>
                                             </div>
                                             <div class="col-xs-8 col-sm-8 no-margin">
-                                                <div class="title">前端课程</div>
-                                                <div class="price">￥270.00</div>
+                                                <div class="title"><?=$cart['title']?></div>
+                                                <div class="price">￥<?=$cart['price']?></div>
                                             </div>
                                         </div>
-                                        <a class="close-btn" href="#"></a>
+                                        <a class="close-btn" href="JavaScript:delCart('<?=\yii\helpers\Url::to(['cart/del'])?>','<?=$cart['cartid']?>','<?=Yii::$app->request->getCsrfToken()?>','<?=$k?>')" title="删除"></a>
                                     </div>
                                 </li>
-
-                                <li>
-                                    <div class="basket-item">
-                                        <div class="row">
-                                            <div class="col-xs-4 col-sm-4 no-margin text-center">
-                                                <div class="thumb">
-                                                    <img alt="" src="assets/images/products/product-small-01.jpg" />
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-8 col-sm-8 no-margin">
-                                                <div class="title">Java课程</div>
-                                                <div class="price">￥270.00</div>
-                                            </div>
-                                        </div>
-                                        <a class="close-btn" href="#"></a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="basket-item">
-                                        <div class="row">
-                                            <div class="col-xs-4 col-sm-4 no-margin text-center">
-                                                <div class="thumb">
-                                                    <img alt="" src="assets/images/products/product-small-01.jpg" />
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-8 col-sm-8 no-margin">
-                                                <div class="title">PHP课程</div>
-                                                <div class="price">￥270.00</div>
-                                            </div>
-                                        </div>
-                                        <a class="close-btn" href="#"></a>
-                                    </div>
-                                </li>
-
-
+                                <?php endforeach;?>
+                                
                                 <li class="checkout">
                                     <div class="basket-item">
                                         <div class="row">
                                             <div class="col-xs-12 col-sm-6">
-                                                <a href="cart.html" class="le-button inverse">查看购物车</a>
+                                                <a href="<?php if($this->params['count']>0){ echo \yii\helpers\Url::to(['cart/index']);}else{ echo '#';}?>" class="le-button inverse">查看购物车</a>
                                             </div>
+
                                             <div class="col-xs-12 col-sm-6">
-                                                <a href="checkout.html" class="le-button">去往收银台</a>
+                                                <a  href="<?php if ($this->params['count']>0){ echo \yii\helpers\Url::to(['order/check']);}else{echo '#';}?>" class="le-button">去往收银台</a>
                                             </div>
+
                                         </div>
                                     </div>
                                 </li>
