@@ -47,7 +47,7 @@
                     <li><a href="<?=Yii::$app->homeUrl?>">首页</a></li>
                     <?php if (Yii::$app->session['user']['isLogin']):?>
 <!--                    <li><a href="--><?//=\yii\helpers\Url::to(['product/index'])?><!--">所有分类</a></li>-->
-                    <li><a href="cart.html">我的购物车</a></li>
+<!--                    <li><a href="cart.html">我的购物车</a></li>-->
                         <li><?=\yii\helpers\Html::a('我的购物车',['cart/index'])?></li>
                     <li><a href="<?=\yii\helpers\Url::to(['order/index'])?>">我的订单</a></li>
                     <?php endif;?>
@@ -56,8 +56,13 @@
 
             <div class="col-xs-12 col-sm-6 no-margin">
                 <ul class="right">
-                    <li><?= \yii\helpers\Html::a('登录',['member/login'])?></li>
-                    <li>  <?= \yii\helpers\Html::a('注册',['member/register'])?></li>
+                    <?php if (Yii::$app->session['user']['isLogin']==1):?>
+                        <li>  您好，欢迎您回来 &nbsp;&nbsp;<?=Yii::$app->session['user']['username']?>，<a href="<?=\yii\helpers\Url::to(['member/logout'])?>" style="color: red;">退出</a>
+                        </li>
+                    <?php else:?>
+                        <li><?= \yii\helpers\Html::a('登录',['member/login'])?></li>
+                        <li>  <?= \yii\helpers\Html::a('注册',['member/register'])?></li>
+                    <?php endif;?>
                 </ul>
             </div><!-- /.col -->
         </div><!-- /.container -->
@@ -69,7 +74,7 @@
             <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
                 <!-- ============================================================= LOGO ============================================================= -->
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="<?=Yii::$app->homeUrl;?>">
                         <img alt="logo" src="assets/images/logo.png" width="233" height="54"/>
                     </a>
                 </div><!-- /.logo -->
