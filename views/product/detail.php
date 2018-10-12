@@ -215,8 +215,10 @@
                             <?php endforeach;?>
                             <div class="pagination pull-right">
                                 <?=\yii\widgets\LinkPager::widget([
-                                        'pagination'=>$pages,
-                                    'prePageLabel'=>'上一页',
+                                    'pagination'=>$pages,
+                                    // 'firstPageLabel'=>'首页',
+                                    //'lastPageLabel'=>'尾页',
+                                    'prevPageLabel'=>'上一页',
                                     'nextPageLabel'=>'下一页',
                                     'hideOnSinglePage'=>true,
                                 ])?>
