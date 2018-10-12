@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\data\Pagination;
 
 /**
  * This is the model class for table "shop_pro_comment".
@@ -71,7 +72,14 @@ class ProComment extends \yii\db\ActiveRecord
      * 根据商品id获取商品评价信息 最新三条
      */
     public function  getProComment($pro_id){
-        $comment = self::find()->where(['pro_id'=>$pro_id])->select(['username','start','comment','create_time'])->orderBy('create_time desc')->limit(3)->asArray()->all();
-        return $comment;
+        $comment = self::find()->where(['pro_id'=>$pro_id])->select(['username','start','comment','create_time']);
+        $model = clone $comment;
+        $pages= new Pagination([
+            'pageTotal'=>$model->count(),
+            'pageSize'=>3,
+            'pageParam'=>'p'
+        ]);
+        $data = $model->offset($pages->offset)->orderBy('create_time desc')->limit($pages->limit)->asArray()->all();
+        return ['comments'=>$data,'pages'=>$pages,'count'=>$model->count()];
     }
 }

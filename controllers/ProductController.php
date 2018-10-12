@@ -31,7 +31,7 @@ class  ProductController extends  CommonController{
 
         //商品评价(获取最新三条)
         $commentModel =  new ProComment();
-        $comment = $commentModel->getProComment($id);
-        return $this->render('detail',['data'=>$data,'pro'=>$pro,'comments'=>$comment]);
+        $result = $commentModel->getProComment($id);
+        return $this->render('detail',['data'=>$data,'pro'=>$pro,'comments'=>$result['comments'],'pages'=>$result['pages'],'count'=>$result['count']]);
     }
 }

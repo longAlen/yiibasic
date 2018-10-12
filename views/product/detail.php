@@ -197,7 +197,7 @@
                                                     <a href="#" class="bold"><?=$comment['username']?></a>
                                                 </div>
                                                 <div class="star-holder inline">
-                                                    <div class="star" data-score="4"></div>
+                                                    <div class="star" data-score="<?=$comment['start']?>"></div>
                                                 </div>
                                                 <div class="date inline pull-right">
                                                     <?=date('Y-m-d h:i:s',$comment['create_time'])?>
@@ -213,6 +213,14 @@
                                 </div><!-- /.row -->
                             </div><!-- /.comment-item -->
                             <?php endforeach;?>
+                            <div class="pagination pull-right">
+                                <?=\yii\widgets\LinkPager::widget([
+                                        'pagination'=>$pages,
+                                    'prePageLabel'=>'上一页',
+                                    'nextPageLabel'=>'下一页',
+                                    'hideOnSinglePage'=>true,
+                                ])?>
+                            </div>
 
                         </div><!-- /.comments -->
 
