@@ -6,6 +6,7 @@
  * Time: 13:01
  */
 namespace  app\controllers;
+use app\models\ProComment;
 use app\models\Product;
 use yii\web\Controller;
 use Yii;
@@ -26,7 +27,9 @@ class  ProductController extends  CommonController{
         $data['all'] = Product::find()->where(['ison'=>1])->orderBy('createtime desc')->all();
 
         //商品评价(获取最新三条)
-
+        $commentModel =  new ProComment();
+        $comment = $commentModel->getProComment($id);
+        var_dump($comment);die;
         return $this->render('detail',['data'=>$data,'pro'=>$pro]);
     }
 }

@@ -48,13 +48,13 @@ class ProComment extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'user_id' => 'User ID',
-            'username' => 'Username',
-            'email' => 'Email',
-            'start' => 'Start',
-            'comment' => 'Comment',
-            'create_time' => 'Create Time',
-            'pro_id' => 'Pro ID',
+            'user_id' => '用户ID',
+            'username' => '用户名',
+            'email' => '邮箱',
+            'start' => '星级',
+            'comment' => '评价内容',
+            'create_time' => '创建时间',
+            'pro_id' => '商品ID',
         ];
     }
 
@@ -64,5 +64,14 @@ class ProComment extends \yii\db\ActiveRecord
     public function getPro()
     {
         return $this->hasOne(Product::className(), ['productid' => 'pro_id']);
+    }
+
+    /***
+     * @param $pro_id 商品id
+     * 根据商品id获取商品评价信息 最新三条
+     */
+    public function  getProComment($pro_id){
+        $comment = self::find()->where(['pro_id'=>$pro_id])->orderBy('create_time desc')->limit(3)->asArray()->all();
+        return $comment;
     }
 }
