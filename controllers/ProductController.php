@@ -23,13 +23,15 @@ class  ProductController extends  CommonController{
     //商品详情页
     public  function  actionDetail(){
         $id = Yii::$app->request->get('productid');
+        if (Yii::$app->request->isPost){
+            return Yii::$app->response->send();
+        }
         $pro = Product::find()->where(['productid'=>$id,'ison'=>1])->one();
         $data['all'] = Product::find()->where(['ison'=>1])->orderBy('createtime desc')->all();
 
         //商品评价(获取最新三条)
         $commentModel =  new ProComment();
         $comment = $commentModel->getProComment($id);
-        print_r($comment);die;
         return $this->render('detail',['data'=>$data,'pro'=>$pro,'comments'=>$comment]);
     }
 }
