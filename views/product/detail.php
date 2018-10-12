@@ -93,7 +93,7 @@
                 <ul class="nav nav-tabs simple" >
                     <li class="active"><a href="#description" data-toggle="tab">商品详情</a></li>
                     <li><a href="#additional-info" data-toggle="tab">商品属性</a></li>
-                    <li><a href="#reviews" data-toggle="tab">商品评价 (3)</a></li>
+                    <li><a href="#reviews" data-toggle="tab">商品评价 (<?=$count?>)</a></li>
                 </ul><!-- /.nav-tabs -->
 
                 <div class="tab-content">
