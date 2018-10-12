@@ -71,7 +71,7 @@ class ProComment extends \yii\db\ActiveRecord
      * 根据商品id获取商品评价信息 最新三条
      */
     public function  getProComment($pro_id){
-        $comment = self::find()->where(['pro_id'=>$pro_id])->orderBy('create_time desc')->limit(3)->asArray()->all();
+        $comment = self::find()->where(['pro_id'=>$pro_id])->select(['username','start','comment','create_time'])->orderBy('create_time desc')->limit(3)->asArray()->all();
         return $comment;
     }
 }
