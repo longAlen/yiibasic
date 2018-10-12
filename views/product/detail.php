@@ -200,7 +200,7 @@
                                                     <div class="star" data-score="4"></div>
                                                 </div>
                                                 <div class="date inline pull-right">
-                                                    <?=date('Y-m-d h:i:s',$comemnt['create_time'])?>
+                                                    <?=date('Y-m-d h:i:s',$comment['create_time'])?>
                                                 </div>
                                             </div><!-- /.meta-info -->
                                             <p class="comment-text">
