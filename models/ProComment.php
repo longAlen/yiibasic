@@ -75,7 +75,7 @@ class ProComment extends \yii\db\ActiveRecord
         $comment = self::find()->where(['pro_id'=>$pro_id])->select(['username','start','comment','create_time']);
         $model = clone $comment;
         $pages= new Pagination([
-            'pageTotal'=>$model->count(),
+            'totalCount'=>$model->count(),
             'pageSize'=>3,
             'pageParam'=>'p'
         ]);
