@@ -3167,8 +3167,8 @@ header .top-cart-row .top-cart-holder .total-price-basket {
 .buy-cart .cart{
   background-color:#1468d6;
 }
-.le-quantity .minus,
-.le-quantity .plus {
+.le-quantity .minus, .le-quantity .reduce,
+.le-quantity .plus, .le-quantity .add {
   position: absolute;
   width: 5px;
   height: 100%;
@@ -3177,22 +3177,22 @@ header .top-cart-row .top-cart-holder .total-price-basket {
   top: 0;
   font-family: fontawesome;
 }
-.le-quantity .minus:hover,
-.le-quantity .plus:hover {
+.le-quantity .minus:hover,.le-quantity .reduce:hover,
+.le-quantity .plus:hover,.le-quantity .add:hover {
   background-color: #f6f6f6;
 }
-.le-quantity .minus,
-.le-quantity .plus,
-.le-quantity .minus:after,
-.le-quantity .plus:after {
+.le-quantity .minus, .le-quantity .reduce,
+.le-quantity .plus, .le-quantity .add,
+.le-quantity .minus:after, .le-quantity .reduce:after,
+.le-quantity .plus:after,  .le-quantity .add:after {
   color: #3d3d3d;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.le-quantity .minus:after,
-.le-quantity .plus:after {
+.le-quantity .minus:after, .le-quantity .reduce:after,
+.le-quantity .plus:after, .le-quantity .add:after {
   position: absolute;
   left: 0;
   right: 0;
@@ -3203,18 +3203,18 @@ header .top-cart-row .top-cart-holder .total-price-basket {
   height: 10px;
   font-size: 10px;
 }
-.le-quantity .minus {
+.le-quantity .minus , .le-quantity .reduce{
   left: 0;
   border-right: 1px solid #e0e0e0;
 }
-.le-quantity .minus:after {
+.le-quantity .minus:after ,.le-quantity .reduce:after{
   content: "\f068";
 }
-.le-quantity .plus {
+.le-quantity .plus ,.le-quantity .add {
   border-left: 1px solid #e0e0e0;
   right: 0;
 }
-.le-quantity .plus:after {
+.le-quantity .plus:after ,.le-quantity .add:after {
   content: "\f067";
 }
 .le-quantity input {
