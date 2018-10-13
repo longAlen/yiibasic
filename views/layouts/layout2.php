@@ -447,11 +447,13 @@
         var new_num = 0;
         if ($(this).hasClass('reduce') && current_num>1){
             new_num = current_num-1;
+            $(this).parent().find('input').val(new_num);
         }
         else if ($(this).hasClass('add')){
             new_num = current_num + 1;
+            $(this).parent().find('input').val(new_num);
         }
-        $(this).parent().find('input').val(new_num);
+
     });
 
 </script>
