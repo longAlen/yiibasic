@@ -317,7 +317,6 @@
             var currentCartId = $(this).parent().parent().find('input').attr('data-value');//购物车id
             var target = $(this).attr('data-url');//请求链接
             var token = $(this).attr('data-token');//ajax请求需传递token值
-            console.log(1111);
             if( $(this).hasClass('minus') && currentQty>1){//减少
                 $.post(target,{id:currentCartId,_csrf:token},function (res) {
                     if (res.status==1){
