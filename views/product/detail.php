@@ -226,7 +226,8 @@
 
                         </div><!-- /.comments -->
 
-                        <div class="add-review row">
+                        <!--商品评价-->
+                        <div class="add-review row" style="display: none;">
                             <div class="col-sm-8 col-xs-12">
                                 <div class="new-review-form">
                                     <h2>Add review</h2>
