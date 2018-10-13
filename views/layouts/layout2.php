@@ -435,10 +435,23 @@
 <script src="assets/js/jquery.customSelect.min.js"></script>
 <script src="assets/js/wow.min.js"></script>
 <script src="assets/js/scripts.js"></script>
+<script src="assets/admin/js/layer/layer.js"></script>
 
 <script>
     $("#createlink").click(function(){
         $(".billing-address").slideDown();
+    });
+    $(".le-quantity a").on('click',function (e) {
+        //当前数量
+        var current_num = parseInt($(this).parent().find('input').val());
+        var new_num = 0;
+        if ($(this).hasClass('reduce') && current_num>1){
+            new_num = current_num-1;
+        }
+        else if ($(this).hasClass('add')){
+            new_num = current_num + 1;
+        }
+        $(this).parent().find('input').val(new_num);
     });
 
 </script>

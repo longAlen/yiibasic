@@ -64,9 +64,9 @@
 
                         <div class="le-quantity">
                             <form>
-                                <a class=" reduce" href="#reduce"></a>
+                                <a class="reduce" href="#reduce"></a>
                                 <input name="quantity" readonly="readonly" type="text" value="1" />
-                                <a class=" add" href="#add"></a>
+                                <a class="add" href="#add"></a>
                             </form>
                         </div>
                         <div class="buy-cart">
