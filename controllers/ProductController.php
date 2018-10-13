@@ -26,6 +26,7 @@ class  ProductController extends  CommonController{
         if (Yii::$app->request->isPost){
             return Yii::$app->response->send();
         }
+
         $pro = Product::find()->where(['productid'=>$id,'ison'=>1])->one();
         $data['all'] = Product::find()->where(['ison'=>1])->orderBy('createtime desc')->all();
 

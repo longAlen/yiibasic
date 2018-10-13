@@ -67,9 +67,10 @@ class ProComment extends \yii\db\ActiveRecord
         return $this->hasOne(Product::className(), ['productid' => 'pro_id']);
     }
 
+
     /***
      * @param $pro_id 商品id
-     * 根据商品id获取商品评价信息 最新三条
+     * 根据商品id获取商品评价信息按倒序展示
      */
     public function  getProComment($pro_id){
         $comment = self::find()->where(['pro_id'=>$pro_id])->select(['username','start','comment','create_time']);
